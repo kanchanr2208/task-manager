@@ -1,3 +1,4 @@
 import './styles.css';
+import { createNote } from './components/createNote';
 
-console.log("Webpack is working! Kanchan is the best");
+createNote();
