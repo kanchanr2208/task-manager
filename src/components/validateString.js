@@ -1,7 +1,7 @@
-export function validateString(inputFunction, charLength) {
+export function validateString(inputFunction, charLength, inputDefaultValue) {
         let string = null
         while (true) {
-            string = inputFunction()
+            string = inputFunction(inputDefaultValue)
             if (string === null) {
                 break
             }
