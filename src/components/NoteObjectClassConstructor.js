@@ -3,5 +3,6 @@ export class Note {
         this.title = title;
         this.desc = desc;
         this.id = id;
+        this.isBinned = false;
     }
 }
