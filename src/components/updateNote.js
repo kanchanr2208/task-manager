@@ -1,11 +1,11 @@
-import { findEntry } from "./findEntry.js" 
+import { findEntryIndex } from "./findEntryIndex.js" 
 import { notesArray } from "./notesArray.js"
 import { validateString } from "./validateString.js"
 import { deleteEntry } from "./deleteEntry.js"
 
 export function updateNote() {
     let noteID      //will be received from the edit button in the display screen
-    let noteIndex = findEntry(noteID, notesArray)
+    let noteIndex = findEntryIndex(noteID, notesArray)
 
     let noteToBeUpdated = notesArray[noteIndex]
 
