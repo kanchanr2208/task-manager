@@ -1,4 +1,4 @@
-export function convertToJSON(object) {
-    let json = JSON.stringify(object);
+export function convertToJSON(array) {
+    let json = JSON.stringify(array);
     return json
 }

@@ -5,6 +5,7 @@ import { createNoteInstance } from "./createNoteInstance.js"
 import { convertToJSON } from "./convertToJSON.js"    /*Needs to be deleted maybe */
 import { notesArray } from "./notesArray.js" 
 import { addToArray } from "./addToArray.js"
+import { saveData } from "./saveData.js"
 
 
 
@@ -25,6 +26,7 @@ export function createNote() {
         return; 
     }
     addToArray(noteObject, notesArray)
+    saveData(notesArray)
 }
 
 
