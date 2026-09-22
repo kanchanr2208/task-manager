@@ -4,5 +4,6 @@ export class Note {
         this.desc = desc;
         this.id = id;
         this.isBinned = false;
+        this.isPinned = false;
     }
 }
