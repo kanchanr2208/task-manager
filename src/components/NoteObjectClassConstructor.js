@@ -1,9 +1,9 @@
 export class Note {
-    constructor(title = "", desc = "", id = null) {
+    constructor(title = "", desc = "", id = null, isBinned = false, isPinned = false) {
         this.title = title;
         this.desc = desc;
         this.id = id;
-        this.isBinned = false;
-        this.isPinned = false;
+        this.isBinned = isBinned;
+        this.isPinned = isPinned;
     }
 }
