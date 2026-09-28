@@ -8,6 +8,9 @@ import { addRigid } from "./addRigid.js";
 import { addFrequency } from "./addFrequency.js";
 import { createBinaryHabitInstance } from "./createHabitInstance.js";
 
+import { addTargetAmount } from "./addTargetAmount.js";
+import { addUnit } from "./addUnit.js"
+
 export function createBinaryHabit() {
     let title = validateString(takeTitleFromUser, 100) //create and validate title string with 100 char limit
     let desc = validateString(takeDescFromUser, 2000)   //create and validate desc string with 2000 char limit
@@ -28,30 +31,25 @@ export function createBinaryHabit() {
 
 export function createQuantitativeHabit() {
 
-}
+    let title = validateString(takeTitleFromUser, 100) //create and validate title string with 100 char limit
+    let desc = validateString(takeDescFromUser, 2000)   //create and validate desc string with 2000 char limit
 
+    let startDate = addStartDate()
+    let frequency = addFrequency()
+    let endDate = addEndDate()
 
-/*
-export class QuantitativeHabit {
-    constructor(
-        title = "", desc = "", id = null, isBinned = false, 
-        isPinned = false, startDate = null, frequency = null, endDate = null,
-        targetAmount = 0, actualAmount = 0, unit = null,
-        entries = [], currentStreak = 0, highestStreak = 0) {
-            this.title = title;
-            this.desc = desc;
-            this.id = id;
-            this.isBinned = isBinned;
-            this.isPinned = isPinned;
-            this.startDate = startDate;
-            this.frequency = frequency;
-            this.endDate = endDate;
-            this.targetAmount = targetAmount;
-            this.actualAmount = actualAmount;
-            this.unit = unit;
-            this.entries = entries;
-            this.currentStreak = currentStreak;
-            this.highestStreak = highestStreak
-    }
+    let targetAmount = addTargetAmount()
+    let unit = addUnit()
+    /*Create habit will be something like:
+    "I want to ____ verb) ____ (targetAmount) ___ (unit) every ___(frequency) for ____(endDate) starting ____ (startDate)" 
+    Example: 
+    i want to "walk" "6" "kilometers" every "weekday" for "1 month" starting "tomorrow"
+    i want to "drink" "3" "litres" water every "day" for "ever" starting "today"
+    
+    Need to adust the fill in the blanks sentence properly for this
+     */
+
+    let habit = createQuantitativeHabitInstance(title, desc, startDate, frequency, endDate, targetAmount, unit)
+    console.log(habit)
+    
 }
-*/

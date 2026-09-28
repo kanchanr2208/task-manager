@@ -29,16 +29,16 @@ export class QuantitativeHabit {
             this.title = title;
             this.desc = desc;
             this.id = id;
-            this.isBinned = isBinned;
-            this.isPinned = isPinned;
             this.startDate = startDate;
             this.frequency = frequency;
             this.endDate = endDate;
-            this.targetAmount = targetAmount;
-            this.actualAmount = actualAmount;
+            this.targetAmount = targetAmount;       //target amount is per cycle
             this.unit = unit;
+            this.actualAmount = actualAmount;
             this.entries = entries;
             this.currentStreak = currentStreak;
-            this.highestStreak = highestStreak
+            this.highestStreak = highestStreak;
+            this.isBinned = isBinned;
+            this.isPinned = isPinned;
     }
 }
