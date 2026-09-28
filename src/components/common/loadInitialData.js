@@ -1,8 +1,8 @@
 import { checkStorageAvailability } from "./checkStorageAvailability";
 
-export function loadInitialData() {
+export function loadInitialData(storedArrayName) {
   if (checkStorageAvailability("localStorage")) {
-    const storedData = localStorage.getItem("allNotes");
+    const storedData = localStorage.getItem(storedArrayName);
 
     if (storedData) {
       // Data exists, return the parsed array

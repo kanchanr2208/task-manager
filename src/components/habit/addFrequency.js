@@ -1,6 +1,12 @@
-export function addFrequency() {
+export function addFrequency(defaultValue) {
         let frequency
-        let input = prompt("Add Frequency. 1 = everyday, 3 = every 3 days, 5 = every workday, 7 = weekly, 30 = monthly ", "1")
+        let input
+        if (!defaultValue) {
+            input = prompt("Add Frequency. 1 = everyday, 3 = every 3 days, 5 = every workday, 7 = weekly, 30 = monthly ", "")
+        } else {
+            input = prompt("Add Frequency. 1 = everyday, 3 = every 3 days, 5 = every workday, 7 = weekly, 30 = monthly ", defaultValue)
+        }
+        
         switch(input) {
             case "1":
                 frequency = 1

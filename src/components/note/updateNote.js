@@ -1,5 +1,7 @@
 import { findEntryIndex } from "../common/findEntryIndex.js" 
 import { notesArray } from "../components/notesArray.js"
+import { takeTitleFromUser } from "../common/takeTitleFromUser.js"
+import { takeDescFromUser } from "../common/takeDescFromUser.js"
 import { validateString } from "../common/validateString.js"
 import { deleteEntry } from "../common/deleteEntry.js"
 
@@ -22,5 +24,7 @@ However, when the prompts are converted to input fields, this issue will be reso
         noteToBeUpdated.title = newTitle
         noteToBeUpdated.desc = newDesc
     }
+
+    //the submit button will have to do the job of saveData(habitsArray, "AllHabits") as well!! Need to remember
     console.log("Note updated")
 }
