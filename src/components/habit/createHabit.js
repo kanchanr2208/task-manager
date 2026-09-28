@@ -11,6 +11,10 @@ import { createBinaryHabitInstance } from "./createHabitInstance.js";
 import { addTargetAmount } from "./addTargetAmount.js";
 import { addUnit } from "./addUnit.js"
 
+import { addToArray } from "../common/addToArray.js";
+import { habitsArray } from "./habitsArray.js";
+import { saveData } from "../common/saveData.js";
+
 export function createBinaryHabit() {
     let title = validateString(takeTitleFromUser, 100) //create and validate title string with 100 char limit
     let desc = validateString(takeDescFromUser, 2000)   //create and validate desc string with 2000 char limit
@@ -22,12 +26,19 @@ export function createBinaryHabit() {
     let endDate = addEndDate()
     let frequency = addFrequency()
 
-    let habit = createBinaryHabitInstance(title, desc, startDate, frequency, endDate, isRigid, isFlexible)
+    let habitObject = createBinaryHabitInstance(title, desc, startDate, frequency, endDate, isRigid, isFlexible)
 
-    console.log(habit)
+    //for some reason if the user clicks close or cancel, the object need to be discarded and not added to array
+    if (habitObject === undefined) {
+        alert("Empty Note Discarded")
+        return; 
+    }
+
+    addToArray(habitObject, habitsArray)
+    saveData(habitsArray)
+    
 
 }
-
 
 export function createQuantitativeHabit() {
 
@@ -49,7 +60,15 @@ export function createQuantitativeHabit() {
     Need to adust the fill in the blanks sentence properly for this
      */
 
-    let habit = createQuantitativeHabitInstance(title, desc, startDate, frequency, endDate, targetAmount, unit)
-    console.log(habit)
+    let habitObject = createQuantitativeHabitInstance(title, desc, startDate, frequency, endDate, targetAmount, unit)
+
+    //for some reason if the user clicks close or cancel, the object need to be discarded and not added to array
+    if (habitObject === undefined) {
+        alert("Empty Note Discarded")
+        return; 
+    }
+    
+    addToArray(habitObject, habitsArray)
+    saveData(habitsArray)
     
 }

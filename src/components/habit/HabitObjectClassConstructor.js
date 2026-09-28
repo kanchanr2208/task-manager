@@ -2,7 +2,7 @@ export class BinaryHabit {
     constructor(
         title = "", desc = "", id = null, startDate = null, frequency = null, endDate = null, 
         isRigid = true, isFlexible = false, currentStreak = 0, highestStreak = 0, isBinned = false, 
-        isPinned = false) {
+        isPinned = false, type = "binary") {
         this.title = title;
         this.desc = desc;
         this.id = id;
@@ -15,6 +15,7 @@ export class BinaryHabit {
         this.highestStreak = highestStreak;
         this.isBinned = isBinned;
         this.isPinned = isPinned;
+        this.type = type;
         
     }
 }
@@ -25,7 +26,7 @@ export class QuantitativeHabit {
         title = "", desc = "", id = null, startDate = null, frequency = null, endDate = null,
         targetAmount = 0, actualAmount = 0, unit = null,
         entries = [], currentStreak = 0, highestStreak = 0,  isBinned = false, 
-        isPinned = false) {
+        isPinned = false, type = "quantitative") {
             this.title = title;
             this.desc = desc;
             this.id = id;
@@ -40,5 +41,6 @@ export class QuantitativeHabit {
             this.highestStreak = highestStreak;
             this.isBinned = isBinned;
             this.isPinned = isPinned;
+            this.type = type
     }
 }
