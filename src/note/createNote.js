@@ -2,9 +2,9 @@ import { takeTitleFromUser } from "../common/takeTitleFromUser.js"
 import { takeDescFromUser } from "../common/takeDescFromUser.js"
 import { validateString } from "../common/validateString.js"
 import { createNoteInstance } from "./createNoteInstance.js"
-import { notesArray } from "../components/notesArray.js" 
 import { addToArray } from "../common/addToArray.js"
 import { saveData } from "../components/saveData.js"
+import { notesArray } from "./notesArray.js"
 
 
 
