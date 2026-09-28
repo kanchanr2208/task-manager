@@ -20,12 +20,7 @@ export function createNote() {
 
     let noteObject = createNoteInstance(titleText, descText)
 
-    if (noteObject === undefined) {
-        alert("Empty Note Discarded")
-        return; 
-    }
-    addToArray(noteObject, notesArray)
-    saveData(notesArray)
+    return noteObject
 }
 
 
