@@ -1,6 +1,6 @@
-import { findEntryIndex } from "./findEntryIndex.js";
-import { deleteEntry } from "./deleteEntry.js";
-import { notesArray } from "./notesArray.js"
+import { findEntryIndex } from "../common/findEntryIndex.js";
+import { deleteEntry } from "../common/deleteEntry.js";
+import { notesArray } from "../components/notesArray.js"
 
 export function deleteNote() {
     let noteToBeDeleted;

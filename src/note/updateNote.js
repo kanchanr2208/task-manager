@@ -1,7 +1,7 @@
-import { findEntryIndex } from "./findEntryIndex.js" 
-import { notesArray } from "./notesArray.js"
-import { validateString } from "./validateString.js"
-import { deleteEntry } from "./deleteEntry.js"
+import { findEntryIndex } from "../common/findEntryIndex.js" 
+import { notesArray } from "../components/notesArray.js"
+import { validateString } from "../common/validateString.js"
+import { deleteEntry } from "../common/deleteEntry.js"
 
 export function updateNote() {
     let noteID      //will be received from the edit button in the display screen

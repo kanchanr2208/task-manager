@@ -1,3 +1,5 @@
+//This function is to clean the binned items. currently it doesnt have a trigger. needs a 30 day timer trigger
+
 export function cleanBin(array) {
     /*
     Using a backward loop because

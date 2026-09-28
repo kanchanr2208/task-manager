@@ -1,11 +1,10 @@
-import { takeTitleFromUser } from "./takeTitleFromUser.js"
-import { takeDescFromUser } from "./takeDescFromUser.js"
-import { validateString } from "./validateString.js"
+import { takeTitleFromUser } from "../common/takeTitleFromUser.js"
+import { takeDescFromUser } from "../common/takeDescFromUser.js"
+import { validateString } from "../common/validateString.js"
 import { createNoteInstance } from "./createNoteInstance.js"
-import { convertToJSON } from "./convertToJSON.js"    /*Needs to be deleted maybe */
-import { notesArray } from "./notesArray.js" 
-import { addToArray } from "./addToArray.js"
-import { saveData } from "./saveData.js"
+import { notesArray } from "../components/notesArray.js" 
+import { addToArray } from "../common/addToArray.js"
+import { saveData } from "../components/saveData.js"
 
 
 

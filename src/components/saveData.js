@@ -1,5 +1,5 @@
 import { checkStorageAvailability } from "./checkStorageAvailability";
-import { convertToJSON } from "./convertToJSON";
+import { convertToJSON } from "../common/convertToJSON";
 
 export function saveData(arrayToSave) {
   // 1. Verify storage is available before trying to use it
