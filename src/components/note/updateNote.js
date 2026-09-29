@@ -4,6 +4,7 @@ import { takeTitleFromUser } from "../common/takeTitleFromUser.js"
 import { takeDescFromUser } from "../common/takeDescFromUser.js"
 import { validateString } from "../common/validateString.js"
 import { deleteEntry } from "../common/deleteEntry.js"
+import { saveData } from "../common/saveData.js"
 
 export function updateNote(noteID) {
     
@@ -25,6 +26,10 @@ However, when the prompts are converted to input fields, this issue will be reso
         noteToBeUpdated.desc = newDesc
     }
 
-    //the submit button will have to do the job of saveData(habitsArray, "AllHabits") as well!! Need to remember
-    console.log("Note updated")
+    //the submit button will have to do the job of saveData(notesArray, "allNotes")
+    //to update localStorage
+    saveData(notesArray, "allNotes")
+
+    //to compare local storage and notes array in JS
+    console.log(notesArray)
 }
