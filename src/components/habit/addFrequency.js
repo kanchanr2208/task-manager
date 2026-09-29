@@ -24,7 +24,7 @@ export function addFrequency(defaultValue) {
                 frequency = "monthly"
                 break
             default: 
-                frequency = 1
+                frequency = null
         }
 
         return frequency

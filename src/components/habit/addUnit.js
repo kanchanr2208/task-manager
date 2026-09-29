@@ -7,6 +7,7 @@ export function addUnit(defaultValue) {
     else {
         unit = prompt("Select tracking unit: km = kilometer, m = meters, l = litres, ml = millilitres, hr = hours, mins = mins ", defaultValue)
     }
+    //ignoring non standard answers since this will be a drop down menu
     
     return unit
 }

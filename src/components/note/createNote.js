@@ -20,6 +20,16 @@ export function createNote() {
     return noteObject
 }
 
+//This will be the process note function attached to the submit button of the new note creation button
+// export function processNewNote() {
+//     // 1. Get the object from your factory
+//     let newNote = createNote();
+
+//     // 2. Pass it into your common processor
+//     processEntry(newNote, notesArray, "allNotes");
+// }
+
+// processNewNote()
 
     /*
     Need the HTML components for:
