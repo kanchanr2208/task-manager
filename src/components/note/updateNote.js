@@ -1,12 +1,12 @@
 import { findEntryIndex } from "../common/findEntryIndex.js" 
-import { notesArray } from "../components/notesArray.js"
+import { notesArray } from "./notesArray.js"
 import { takeTitleFromUser } from "../common/takeTitleFromUser.js"
 import { takeDescFromUser } from "../common/takeDescFromUser.js"
 import { validateString } from "../common/validateString.js"
 import { deleteEntry } from "../common/deleteEntry.js"
 
-export function updateNote() {
-    let noteID      //will be received from the edit button in the display screen
+export function updateNote(noteID) {
+    
     let noteIndex = findEntryIndex(noteID, notesArray)
 
     let noteToBeUpdated = notesArray[noteIndex]

@@ -6,7 +6,7 @@ import { addEndDate } from "./addEndDate.js";
 import { addFlexible } from "./addFlexible.js";
 import { addRigid } from "./addRigid.js";
 import { addFrequency } from "./addFrequency.js";
-import { createBinaryHabitInstance } from "./createHabitInstance.js";
+import { createBinaryHabitInstance, createQuantitativeHabitInstance } from "./createHabitInstance.js";
 
 import { addTargetAmount } from "./addTargetAmount.js";
 import { addUnit } from "./addUnit.js"
@@ -23,6 +23,7 @@ export function createBinaryHabit() {
     let frequency = addFrequency()
 
     let habitObject = createBinaryHabitInstance(title, desc, startDate, frequency, endDate, isRigid, isFlexible)
+    console.log(habitObject)
 
     return habitObject
     
@@ -50,6 +51,8 @@ export function createQuantitativeHabit() {
      */
 
     let habitObject = createQuantitativeHabitInstance(title, desc, startDate, frequency, endDate, targetAmount, unit)
+
+    console.log(habitObject)
 
     return habitObject
     

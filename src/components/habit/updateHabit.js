@@ -21,24 +21,32 @@ export function updateHabit() {
     let newTitle = validateString(takeTitleFromUser, 100, habitToBeUpdated.title) 
     let newDesc = validateString(takeDescFromUser, 2000, habitToBeUpdated.desc)
 
-    let newStartDate = addStartDate(habitToBeUpdated.startDate)
-    let newEndDate = addEndDate(habitToBeUpdated.endDate)
     let newFrequency = addFrequency(habitToBeUpdated.frequency)
 
+    let newStartDate = addStartDate(habitToBeUpdated.startDate)
+    let newEndDate = addEndDate(habitToBeUpdated.endDate)
+
+    let newIsFlexible
+    let newIsRigid
+
+    let newTargetAmount
+    let newUnit
+    
+
     if (habitToBeUpdated.type === "binary") {
-        let newIsFlexible = addFlexible(habitToBeUpdated.isFlexible)
-        let newIsRigid = addRigid(newIsFlexible)
+        newIsFlexible = addFlexible(habitToBeUpdated.isFlexible)
+        newIsRigid = addRigid(newIsFlexible)
 
     } else if (habitToBeUpdated.type === "quantitative") {
-        let newTargetAmount = addTargetAmount(habitToBeUpdated.targetAmount)
-        let newUnit = addUnit(habitToBeUpdated.unit)
+        newTargetAmount = addTargetAmount(habitToBeUpdated.targetAmount)
+        newUnit = addUnit(habitToBeUpdated.unit)
     }
 
 
     /*Right now, there is an issue that if the user clicks cancel because they dont want to update the 
     title or description, the string will become null. so the string will be deleted. 
     However, when the prompts are converted to input fields, this issue will be resolved */
-    if(newTitle === null && newDesc === null && newStartDate === null && newEndDate === null && newFrequency === null) {
+    if(newTitle === null && newFrequency === null) {
         deleteEntry(habitIndex, habitsArray)
     } else {
 
