@@ -2,6 +2,8 @@ import { takeTitleFromUser } from "../common/takeTitleFromUser.js"
 import { takeDescFromUser } from "../common/takeDescFromUser.js"
 import { validateString } from "../common/validateString.js"
 import { createNoteInstance } from "./createNoteInstance.js"
+import { notesArray } from "./notesArray.js"
+import { processEntry } from "../common/processEntry.js"
 
 
 
@@ -15,7 +17,9 @@ export function createNote() {
     let titleText = validateString(takeTitleFromUser, 100) 
     let descText = validateString(takeDescFromUser, 2000)
 
+    //This needs to triggered by the submit function
     let noteObject = createNoteInstance(titleText, descText)
+    processEntry(noteObject, notesArray, "allNotes");
 
     return noteObject
 }
