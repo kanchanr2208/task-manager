@@ -1,7 +1,6 @@
 import { findEntryIndex } from "../common/findEntryIndex.js";
 import { deleteEntry } from "../common/deleteEntry.js";
 import { notesArray } from "./notesArray.js"
-import { processEntry } from "../common/processEntry.js";
 import { saveData } from "../common/saveData.js";
 
 export function deleteNote(noteID) {

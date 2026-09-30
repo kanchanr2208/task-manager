@@ -1,13 +1,14 @@
 import { findEntryIndex } from "../common/findEntryIndex"
 import { deleteEntry } from "../common/deleteEntry"
 import { habitsArray } from "./habitsArray"
+import { saveData } from "../common/saveData.js";
 
-export function deleteHabit() {
-    //we will have to capture this from the DOM element, and subsequently its ID
-    let habitToBeDeleted
-
-    let habitIndex = findEntryIndex(habitToBeDeleted.id, habitsArray)
+export function deleteHabit(habitID) {
+    
+    let habitIndex = findEntryIndex(habitID, habitsArray)
     deleteEntry(habitIndex, habitsArray)
+
+    saveData(habitsArray, "allHabits")
 }
 
 /* This can probably be a common function, since the id will be capturd from the dom element,
