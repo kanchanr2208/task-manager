@@ -11,4 +11,14 @@ import { deleteNote } from "./components/note/deleteNote"
 import { updateNote } from "./components/note/updateNote"
 import { notesArray } from './components/note/notesArray';
 
-//updateHabit("b573896b-94ae-49b2-ab51-5427eb35d295")
+
+import { loadContainer } from './components/dom/container';
+import { loadSidePanel } from './components/dom/sidepanel';
+
+let container = loadContainer()
+let sidePanel = loadSidePanel()
+
+
+container.append(sidePanel)
+
+document.body.append(container)
