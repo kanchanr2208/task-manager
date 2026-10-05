@@ -1,7 +1,7 @@
-import highIcon from "../../media/high-priority-color.svg"
-import midIcon from "../../media/mid-priority-color.svg"
-import lowICon from "../../media/low-priority-color.svg"
-import allIcon from "../../media/all-priority-grayscale.svg"
+import highIcon from "../../../media/high-priority-color.svg"
+import midIcon from "../../../media/mid-priority-color.svg"
+import lowICon from "../../../media/low-priority-color.svg"
+import allIcon from "../../../media/all-priority-grayscale.svg"
 
 import {loadComponent} from "./sidePanelSectionComponent.js"
 

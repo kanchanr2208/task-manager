@@ -1,7 +1,7 @@
-import noteIcon from "../../media/note.svg"
-import listIcon from "../../media/list.svg"
-import habitIcon from "../../media/habit.svg"
-import allEntriesIcon from "../../media/all-entries.svg"
+import noteIcon from "../../../media/note.svg"
+import listIcon from "../../../media/list.svg"
+import habitIcon from "../../../media/habit.svg"
+import allEntriesIcon from "../../../media/all-entries.svg"
 
 import {loadComponent} from "./sidePanelSectionComponent.js"
 

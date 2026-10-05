@@ -1,6 +1,6 @@
-import pastIcon from "../../media/past-deadline.svg"
-import upcomingIcon from "../../media/upcoming-deadline.svg"
-import allIcon from "../../media/all-deadline.svg"
+import pastIcon from "../../../media/past-deadline.svg"
+import upcomingIcon from "../../../media/upcoming-deadline.svg"
+import allIcon from "../../../media/all-deadline.svg"
 
 import {loadComponent} from "./sidePanelSectionComponent.js"
 

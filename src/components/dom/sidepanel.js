@@ -1,7 +1,7 @@
-import { loadDashboardButton } from "./dashBoardButton"
-import { loadSidePanelEntries } from "./sidePanelEntries"
-import { loadSidePanelPriorities } from "./sidePanelPriorities"
-import { loadSidePanelDeadlines } from "./sidePanelDeadlines"
+import { loadDashboardButton } from "./sidePanelComponents/dashBoardButton"
+import { loadSidePanelEntries } from "./sidePanelComponents/sidePanelEntries"
+import { loadSidePanelPriorities } from "./sidePanelComponents/sidePanelPriorities"
+import { loadSidePanelDeadlines } from "./sidePanelComponents/sidePanelDeadlines"
 
 export function loadSidePanel() {
     const sidepanelContainer = document.createElement("div")

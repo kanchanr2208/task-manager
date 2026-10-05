@@ -1,4 +1,4 @@
-import dashboardIcon from "../../media/dashboard-icon.svg"
+import dashboardIcon from "../../../media/dashboard-icon.svg"
 
 export function loadDashboardButton() {
     const dashboardButton = document.createElement("div")
