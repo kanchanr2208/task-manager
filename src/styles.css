@@ -1,13 +1,19 @@
 :root {
     --background: #111113;
     --side-panel: #09090B;
-    --component: #272729;
+    --dashboard-button: #272729;
     --border-radius: 6px;
     --text-color-bright: #C4C4C4; 
     --text-color-mid: #828282;
     --text-color-dull: #5E5E5E;
+    --font-family: "Google Sans", sans-serif;
     --font-12px: 12px;
     --semi-bold: 600;
+    --box-shadow: 0 0 2px 1px rgba(163, 163, 163, 0.25);
+    --component: #18181A;
+    --accent-color: #BE2DDF;
+
+    --side-panel-width: 12%;
 }
 
 body {
@@ -17,17 +23,17 @@ body {
     box-sizing: border-box;
     overflow: hidden;
     color: var(--text-color-bright);
-    font-family: "Google Sans", sans-serif;
+    font-family:var(--font-family)
 }
 
 .container {
     width: 100vw;
-    outline: 1px solid red; /*Temporary*/
     height: 100vh;
+    display: flex;
 }
 
 .side-panel-container {
-    width: 200px;
+    width: var(--side-panel-width);             /*Needs to be more precise*/
     height: 100vh;
     background-color: var(--side-panel);
     display: flex;
@@ -38,7 +44,7 @@ body {
 
 .dashboard-button {
     width: 160px;
-    background-color: var(--component);
+    background-color: var(--dashboard-button);
     height: 30px;
     border-radius: var(--border-radius);
     display: flex;
@@ -47,6 +53,7 @@ body {
     padding-left: 5%;               /*Needs to be standardized*/
     align-items: center;
     gap: 4px;
+    cursor: pointer;
 }
 
 .dashboard-icon {
@@ -69,15 +76,146 @@ body {
     text-transform: uppercase;
 }
 
-
 .side-panel-section-component {
     display: flex;
     color: var(--text-color-mid);
     font-weight: var(--semi-bold);
     font-size: var(--font-12px);
     gap: 4px;
+    cursor: pointer;
 }
 
 .side-panel-section-component img {
     height: 14px;
 }
+
+.display-section {
+    width: calc(100% - var(--side-panel-width));
+    display: flex;
+    padding: 1%;
+}
+
+.back-and-close-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.button-container {
+    background: var(--component);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.button-container img {
+    height: 11px;
+}
+
+.add-note {
+    width: 300px;
+    height: 200px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--component);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+}
+
+.entry-title {
+    background-color: var(--component);
+    border: none;
+    color: var(--text-color-bright);
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.entry-title:focus,
+.add-note textarea:focus {
+    outline: none;
+}
+
+.add-note input::placeholder {
+    color: var(--text-color-dull);
+    font-size: var(--font-12px);
+}
+
+.add-note textarea {
+    height: 250px;
+    background-color: var(--component);
+    border: none;
+    resize: none;
+    font-family:var(--font-family);
+    font-size: 10px;
+    color: var(--text-color-bright);
+}
+
+.add-note textarea::placeholder {
+    color: var(--text-color-dull);
+    font-size: 10px
+}
+
+/*CSS to change scroll bar of text area. mostly taken from google and fiddled with*/
+textarea::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 50px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background-color: var(--component);
+    border-radius: 50px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 50px;
+}
+
+.add-habit {
+    width: 300px;
+    height: 200px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--component);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+}
+
+select {
+    width: 100px;
+    height: 25px;
+    padding: 1% 2%;
+    border-radius: 4px;
+    background-color: var(--dashboard-button);
+    color: var(--text-color-mid);
+
+    -webkit-appearance: none;
+    appearance: none;
+
+    border: none;
+    outline: none;  
+    font-family: var(--font-family);
+    font-size: var(--font-12px); 
+}
+
+label {
+    font-size: 10px;
+    padding-bottom: 3px;
+}
+
+select option {
+    color: var(--text-color-bright);
+    font-size: var(--font-12px);
+    border: none;
+    outline: none;
+}
+
+select option:focus {
+    background-color: var(--side-panel);
+    border: none;
+    outline: none;
+} 

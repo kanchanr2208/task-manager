@@ -13,7 +13,7 @@ export function loadSidePanelDeadlines() {
     title.textContent = "deadlines"
 
     const past = loadComponent(pastIcon, "Past Due")
-    const upcoming = loadComponent(upcomingIcon, "Near Future")
+    const upcoming = loadComponent(upcomingIcon, "Upcoming")
     const all = loadComponent(allIcon, "All Deadlines")
     
 
